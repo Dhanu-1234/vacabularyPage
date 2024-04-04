@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg-container {
+    background-image: linear-gradient(to bottom left, #ff8533, #ffaa00);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.clouds {
+    height: 120px;
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wave {
+    background-image: url("http://front-end-noobs.com/jecko/img/wave-top.png");
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    animation: wave 10s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+    animation: wave 15s reverse infinite;
+    opacity: 0.5;
+    bottom: 0;
+}
+
+.wave:nth-of-type(3) {
+    animation: wave 30s linear infinite;
+    opacity: 0.5;
+    bottom: 0;
+}
+
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
+}
+
+.sun {
+    position: absolute;
+    bottom: 0;
+    background-image: radial-gradient(#ff8000, #ffcc00);
+    height: 400px;
+    width: 400px;
+    border-radius: 300px;
+    box-shadow: #ffcc00 0px 0px 25px 25px;
+    z-index: 0;
+}
+
+.box {
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin: 20px;
+    padding: 10px 20px 10px;
+    box-shadow: #e67300 0px 0px 10px 2px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.box:hover {
+    cursor: pointer;
+    background-color: #ffa64d;
+}
+
+.heading {
+    color: #ffffff;
+    font-family: system-ui;
+    font-size: 46px;
+}
+
